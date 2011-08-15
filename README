@@ -1,7 +1,7 @@
 I was bored, so I started to implement ack (http://betterthangrep.com/)
 in awk.  It is a very simplistic version of ack.
 
-Usage: ./awck search_patter [path]
+Usage: ./awck search_pattern [path]
 
 examples:
 ./awck debugger jquery.js
