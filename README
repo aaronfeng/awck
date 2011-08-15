@@ -21,3 +21,7 @@ sys 0m0.055s
 real  0m0.022s
 user  0m0.015s
 sys 0m0.005s
+
+TODO:
+
+* The ability to ignore non-code files (turn this thing from grep to ack).
