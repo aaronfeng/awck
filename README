@@ -1,0 +1,23 @@
+I was bored, so I started to implement ack (http://betterthangrep.com/)
+in awk.  It is a very simplistic version of ack.
+
+Usage: ./awck search_patter [path]
+
+examples:
+./awck debugger jquery.js
+./awck [0-9]+ ../jquery.js
+
+Since it is not as featureful as ack (but gets the job done), it seems to be
+a bit faster than ack.
+
+> time ack [0-9]+ jquery.js > /dev/null
+
+real  0m0.188s
+user  0m0.071s
+sys 0m0.055s
+
+> time ./awck [0-9]+ jquery.js > /dev/null
+
+real  0m0.022s
+user  0m0.015s
+sys 0m0.005s

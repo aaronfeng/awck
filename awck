@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+  echo "usage: $0 search_pattern [directory]"
+  exit 1
+fi
+
+PATTERN=$1
+shift
+
+SEARCH_PATH=$@
+
+if [ -z "$SEARCH_PATH" ]; then
+  SEARCH_PATH="."
+fi
+
+./ack.awk $PATTERN $(find $SEARCH_PATH -type f)
