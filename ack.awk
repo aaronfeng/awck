@@ -23,11 +23,3 @@ match($0, pattern) {
   gsub(matched_text, "\033[1;31m" matched_text "\033[0m", $0);
   printf "%s", FILENAME ":"  NR ":  " $0 "\n";
 }
-#$0 ~ pattern {
-#  #print "0 " $0;
-#  #print "1 " $1;
-#  #print "pattern " pattern;
-#  # when pattern is regex, the gsub doesn't work correctly
-#  gsub(pattern, "\033[1;31m" pattern "\033[0m", $0);
-#  printf "%s", FILENAME ":"  NR ":  " $0 "\n";
-#}
