@@ -14,4 +14,4 @@ if [ -z "$SEARCH_PATH" ]; then
   SEARCH_PATH="."
 fi
 
-./ack.awk $PATTERN $(find $SEARCH_PATH -type f)
+$(dirname "$0")/ack.awk $PATTERN $(find $SEARCH_PATH -type f)
