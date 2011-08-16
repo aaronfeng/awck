@@ -14,4 +14,4 @@ if [ -z "$SEARCH_PATH" ]; then
   SEARCH_PATH="."
 fi
 
-$(dirname "$0")/ack.awk $PATTERN $(find $SEARCH_PATH -type f)
+find $SEARCH_PATH -type f | xargs -n $(getconf ARG_MAX) $(dirname "$0")/ack.awk $PATTERN
